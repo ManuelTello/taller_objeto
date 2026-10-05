@@ -1,15 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tema2;
-
 
 public class Partido {
     private String local;
+    
     private String visitante;
+    
     private int golesLocal; 
+    
     private int golesVisitante;
     
     public Partido(){
@@ -22,7 +19,6 @@ public class Partido {
         golesLocal = unGolLocal;
         golesVisitante = unGolVisitante;
     }
-
     
     public String getLocal() {
         return local;
@@ -57,25 +53,23 @@ public class Partido {
     }
     
     public boolean hayGanador(){
-         return (golesLocal!=golesVisitante); 
+        return (golesLocal!=golesVisitante); 
     }
     
     public boolean hayEmpate(){
-         return ((golesLocal==golesVisitante));
+        return ((golesLocal==golesVisitante));
     }
     
     public String getGanador(){
-         String ganador=new String();
-         if (golesLocal>golesVisitante){
-             ganador = local;
+        String ganador=new String();
+        if (golesLocal>golesVisitante){
+            ganador = local;
          }
-         else {
-             if (golesLocal<golesVisitante){
-                 ganador = visitante;
-             }
-         }
-         return ganador;
-                 
+        else {
+            if (golesLocal<golesVisitante){
+                ganador = visitante;
+            }
+        }
+        return ganador;          
     }	    
-    
 }
